@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Untuk Kembaranku 💜</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BACKGROUND GLOW -->
+    <div class="background-glow glow1"></div>
+    <div class="background-glow glow2"></div>
+    <div class="background-glow glow3"></div>
+
+    <!-- CONTAINER -->
+    <div class="container">
+
+        <!-- HALAMAN 1 -->
+        <div class="page active" id="page1">
+
+            <h1>💜 OII MY TWIN 💜</h1>
+
+            <p>
+                An enca lawes bapak ras mamak, ras kita ngurus ktp ras kartu keluarga an,
+                jei mberat kel uga pei me perban gelar Ndu bas kartu keluarga berubah jadi "KEPALA KELUARGA".
+                paham nge aku an, agia maaf ya gundari lit perbedaan antara kita, Kam erdahin sedangken aku lang.
+
+                <br><br>
+                SORRY YA AN.....:>
+            </p>
+
+            <button onclick="nextPage(2)">
+                Klik Aku ✨
+            </button>
+
+        </div>
+        <!-- HALAMAN 2 -->
+        <div class="page" id="page2">
+
+            <h1>🌙 SEMANGAT YAAA MY TWIN 🌙</h1>
+        <div class="gambar-kembar">
+
+    <img src="pinklucu.gif" alt="karakter lucu" class="gambar-ungu">
+
+    <img src="lucu-ungu.gif" alt="beruang lucu" class="gambar-beruang">
+
+</div>
+            <p>
+                Ku atek sengei aku banci erdahin janah kuliah An kepeken mesera nk
+                merasa bersalah nge aku, agia uga lah pei ku ban, langa ka dat dahin si cocok deh.
+                Kam jena semangat ya An, ertoto kita semoga sem 3 kari dorek kita ngekos janah erdahin An.
+
+                <br>
+            TEDEH TEKU KAM AN :)
+            </p>
+
+            <div class="button-group">
+                <button onclick="prevPage(1)">Kembali</button>
+                <button onclick="nextPage(3)">Lanjut</button>
+            </div>
+
+        </div>
+
+        <!-- HALAMAN 3 -->
+        <div class="page" id="page3">
+
+            <h1>✨ ENJOY YAA MY TWIN ✨</h1>
+
+            <p>
+                Pokokna semangat ya An, lakuteh kata-kata kai pei ban deh
+                aku pei nggo palak mbegi kata-kata semangat ei, agia lalap ku semangati kalak.
+                Adi latih akapNdu erdahin,"Adi sempat Kam" chat aja aku an, entah adi perlu teman cerita
+                agia gundari labo Kam perlu me An, soal Na nggo lit rondongNdu
+                hehe maaf ka ya, labo aku iri man anak kalak ah An
+                agia cemburu sitik kel, biasana lit nge waktuNdu bangku, exaited tiap cerita bangku, enca lit rondongNdu,
+                LANAI AN.
+
+                <br><br>
+                SELALU TERSENYUM YA AN
+            </p>
+
+            <div class="button-group">
+                <button onclick="prevPage(2)">Kembali</button>
+                <button onclick="nextPage(4)">Lanjut</button>
+            </div>
+
+        </div>
+
+        <!-- HALAMAN 4 -->
+        <div class="page" id="page4">
+
+            <h1>💖 LOPYOUU MY TWIN 💖</h1>
+
+            <p>
+                Tetap bersyukur ya My Twin, aku pei seh kel beryukur na lit kembaran ku bagi kam ena,
+                pekerja keras, nggit ka mengalah, ras la pelittt wkwk
+                ei saja lebe nyahh, latih akapNdu mbacasa Ann
+                <br><br>
+                ULA LUPA MAN RAS MINEM, JAGA KESEHATAN YA BUTET
+            </p>
+            
+            <div class="button-group">
+                <button onclick="prevPage(3)">Kembali</button>
+                <button onclick="nextPage(1)">Ulang Lagi</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function nextPage(pageNumber) {
+
+            document.querySelectorAll(".page").forEach(page => {
+                page.classList.remove("active");
+            });
+
+            document.getElementById("page" + pageNumber).classList.add("active");
+
+        }
+
+        function prevPage(pageNumber) {
+
+            document.querySelectorAll(".page").forEach(page => {
+                page.classList.remove("active");
+            });
+
+            document.getElementById("page" + pageNumber).classList.add("active");
+
+        }
+
+    </script>
+
+</body>
+</html>
