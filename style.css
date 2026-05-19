@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #120012,
+        #1d0029,
+        #2b0036
+    );
+
+    position: relative;
+}
+
+.background-glow{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.6;
+    animation: floating 8s infinite ease-in-out;
+}
+
+.glow1{
+    width: 300px;
+    height: 300px;
+    background: #b100ff;
+    top: -80px;
+    left: -50px;
+}
+
+.glow2{
+    width: 250px;
+    height: 250px;
+    background: #7a00ff;
+    bottom: -60px;
+    right: -30px;
+}
+
+.glow3{
+    width: 200px;
+    height: 200px;
+    background: #ff00f7;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes floating{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(20px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+/* CONTAINER */
+
+.container{
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    z-index: 10;
+}
+
+/* PAGE */
+
+.page{
+
+    display: none;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 2px solid rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(15px);
+
+    padding: 50px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow:
+    0 0 20px #a200ff,
+    0 0 40px rgba(162,0,255,0.5),
+    0 0 80px rgba(162,0,255,0.3);
+
+    animation: fadeIn 0.8s ease;
+}
+
+/* ACTIVE PAGE */
+
+.page.active{
+    display: block;
+}
+
+/* TITLE */
+
+.page h1{
+
+    color: #ffffff;
+
+    font-size: 42px;
+
+    margin-bottom: 25px;
+
+    text-shadow:
+    0 0 10px #d400ff,
+    0 0 20px #d400ff,
+    0 0 40px #d400ff;
+
+}
+
+/* PARAGRAPH */
+
+.page p{
+
+    color: #f3ddff;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    margin-bottom: 35px;
+
+}
+
+/* BUTTON GROUP */
+
+.button-group{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* BUTTON */
+
+button{
+
+    padding: 14px 35px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        45deg,
+        #8a00ff,
+        #d000ff
+    );
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+
+    box-shadow:
+    0 0 15px #b300ff,
+    0 0 30px rgba(179,0,255,0.5);
+
+}
+
+/* BUTTON HOVER */
+
+button:hover{
+
+    transform: scale(1.08) translateY(-5px);
+
+    background: linear-gradient(
+        45deg,
+        #d000ff,
+        #ff4df0
+    );
+
+    box-shadow:
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff,
+    0 0 70px rgba(255,0,255,0.6);
+
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px){
+
+    .page{
+
+        padding: 35px 25px;
+
+    }
+
+    .page h1{
+
+        font-size: 30px;
+
+    }
+
+    .page p{
+
+        font-size: 16px;
+
+    }
+
+    .button-group{
+
+        flex-direction: column;
+
+    }
+
+}
+/* GAMBAR HALAMAN 2 */
+
+.gambar-kembar{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+/* STYLE GAMBAR */
+
+.gambar-kembar img{
+
+    width: 150px;
+
+    transition: 0.5s;
+
+    cursor: pointer;
+
+    filter:
+    drop-shadow(0 0 10px #ff8cff)
+    drop-shadow(0 0 20px #c300ff);
+
+}
+
+/* HOVER */
+
+.gambar-kembar img:hover{
+
+    transform: scale(1.1) rotate(3deg);
+
+    filter:
+    drop-shadow(0 0 15px #ff00ff)
+    drop-shadow(0 0 35px #ff00ff);
+
+}
+
+/* GAMBAR UNGU */
+
+.gambar-ungu{
+
+    animation: melayang1 4s ease-in-out infinite;
+
+}
+
+/* GAMBAR BERUANG */
+
+.gambar-beruang{
+
+    animation: melayang2 5s ease-in-out infinite;
+}
+
+
+/* ANIMASI */
+
+@keyframes melayang1{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-12px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
+
+@keyframes melayang2{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(12px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+
+}
